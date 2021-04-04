@@ -21,6 +21,11 @@ html {
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    transition: 0.7s;
+}
+
+.change .hamburger-menu{
+    right: 33rem;
 }
 
 .line{
@@ -30,6 +35,48 @@ html {
     box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
 }
 
+.change .line {
+ background-color: black;
+
+}
+
+.change .line-1 {
+    transform: rotate(45deg)
+    translate(0.3rem,0.8rem);
+}
+
+.change .line-2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.change .line-3 {
+    transform: rotate(-45deg) translate(0.3rem, -0.8rem);
+  } 
+
+  .hamburger-menu span {
+    position: absolute;
+    left: 5rem;
+    width: 10rem;
+    height: 4rem;
+    background-color: #e2b646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+  
+  .change .hamburger-menu:hover span {
+    opacity: 1;
+    visibility: visible;
+  }
+  
 .header {
     width: 100%;
     height: 100vh;
@@ -85,8 +132,8 @@ forwards;
 
 .banner p{
     font-family: "Josefin Slab",serif;
-    font-size: 4rem;
-    color: #fff;
+    font-size: 3rem;
+    color: black;
     width: 70%;
     letter-spacing: 0.1rem;
     margin-bottom: 3rem;
@@ -130,8 +177,13 @@ forwards;
      height: 100vh;
      position: fixed;
      top: 0;
-     right: 0;
+     right: -40rem;
      background-color: white;
+     transition: right 0.5s;
+}
+
+.change .sidebar {
+    right: 0;
 }
 
 .menu{
@@ -150,6 +202,7 @@ forwards;
     font-family: 'Baloo Da 2',serif ;
     font-size: 4rem;
     color:#c29525;
+    position: relative;
 }
 
 .menu-link::before {
@@ -157,7 +210,7 @@ forwards;
     position: absolute;
     top: 0;
     left: 0;
-    color: #5f5858;
+    color: black;
     width: 0;
     overflow: hidden;
     white-space: nowrap;
