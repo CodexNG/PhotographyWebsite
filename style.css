@@ -153,7 +153,20 @@ forwards;
 }
 
 .menu-link::before {
-    content: ;
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #5f5858;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease-in-out;
+
+}
+
+.menu-link:hover::before{
+    width: 100%;
 }
 
 .social-media{
